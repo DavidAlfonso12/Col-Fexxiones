@@ -1,6 +1,4 @@
 <?php 
-<<<<<<< HEAD
-
 include_once('conexion.php');
 include_once('class.php');
 

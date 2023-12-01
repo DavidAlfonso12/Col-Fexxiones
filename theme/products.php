@@ -36,7 +36,6 @@
                       <label for="" class="mb-2">Seleccione una categoria</label>
                       <select class="form-select mb-3" aria-label="Default select example" name="categoria">
                         <option selected >Categoria</option>
-<<<<<<< HEAD
                         <?php
                           include("php/login/conexion.php");
 
@@ -62,11 +61,7 @@
                     <label for="exampleInputPassword1" class="form-label">Descripcion</label>
                     <textarea class="form-control" name="descripcionProd"></textarea>
                   </div>  
-<<<<<<< HEAD
-                <button type="submit" class="btn btn-primary mt-3">Registrar</button>
-=======
                 <button type="submit" class="btn btn-primary mt-3" value="ok">Registrar</button>
->>>>>>> ramaJefe
               </form>
         </div>
 
@@ -75,8 +70,7 @@
         <!-- Tabla de productos en la base de datos -->
         <div class="col-lg-8 mt-5">
             <table class="table table-striped mt-5">
-<<<<<<< HEAD
-                <thead>
+                <!-- <thead>
                   <tr>
                     <th scope="col">Id</th>
                     <th scope="col">Nombre Producto</th>
@@ -104,7 +98,7 @@
                     <td colspan="2">Larry the Bird</td>
                     <td>@twitter</td>
                   </tr>
-=======
+======= -->
                 <thead class="bg-info">
                   <tr>
                     <th scope="col">Id</th>

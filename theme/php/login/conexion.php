@@ -12,10 +12,10 @@ try {
 }
 
 
-// $link = mysqli_connect($host, $user, $password) or die ("Error al conectarse al Servidor");
+$link = mysqli_connect($host, $user, $password) or die ("Error al conectarse al Servidor");
 
-// mysqli_select_db($link,$dbname) or die ("Error al conectarse con la Base de datos");
+mysqli_select_db($link,$dbname) or die ("Error al conectarse con la Base de datos");
 
-// return $link;
+return $link;
 
 ?>
