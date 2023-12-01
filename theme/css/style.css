@@ -168,7 +168,6 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
   vertical-align: middle;
   margin-right: 5px;
 }
-
 .btn-small {
   padding: 8px 25px;
   font-size: 10px;
@@ -1482,7 +1481,231 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
   }
 }
 
+/* <<<<<<< HEAD
 .dashboard-wrapper {
+======= */
+
+
+.img-responsi{
+  display: block;
+    max-width: 100%;
+    height: auto;
+    margin-left: 30%;
+}
+
+.btn2_container {
+  margin-left: 40%;
+  width: 70px;
+  height: 30px;
+  background-color: #F8EDE3;
+  display: flex;
+  position: relative;
+  border: 3px solid #111;
+  margin-right: 20px;
+  
+}
+
+.two {
+  position: absolute;
+  height: 25px;
+  width: 35px;
+  background-color: grey;
+  display: block;
+  border: 2px solid red;
+  background-color: rgba(255, 0, 0, 0.951);
+  transition: all 0.3s ease;
+  clip-path: polygon(0 0, 50% 0, 100% 100%, 0% 100%);
+}
+
+.two {
+  left: 00px;
+}
+
+.inactive2 {
+  transform: translateX(calc(40px - 11px));
+  border: 2px solid #10d610;
+  background-color: rgba(0, 255, 0, 0.943);
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.btn3_container {
+  margin-left: 40%;
+  width: 70px;
+  height: 30px;
+  background-color: #F8EDE3;
+  display: flex;
+  position: relative;
+  border: 3px solid #111;
+  margin-right: 20px;
+  
+}
+
+.tres {
+  position: absolute;
+  height: 25px;
+  width: 35px;
+  background-color: grey;
+  display: block;
+  border: 2px solid red;
+  background-color: rgba(255, 0, 0, 0.951);
+  transition: all 0.3s ease;
+  clip-path: polygon(0 0, 50% 0, 100% 100%, 0% 100%);
+}
+
+.tres {
+  left: 00px;
+}
+
+.inactive3 {
+  transform: translateX(calc(40px - 11px));
+  border: 2px solid #10d610;
+  background-color: rgba(0, 255, 0, 0.943);
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.btn4_container {
+  margin-left: 40%;
+  width: 70px;
+  height: 30px;
+  background-color: #F8EDE3;
+  display: flex;
+  position: relative;
+  border: 3px solid #111;
+  margin-right: 20px;
+ 
+}
+
+.four {
+  position: absolute;
+  height: 25px;
+  width: 35px;
+  background-color: grey;
+  display: block;
+  border: 2px solid red;
+  background-color: rgba(255, 0, 0, 0.951);
+  transition: all 0.3s ease;
+  clip-path: polygon(0 0, 50% 0, 100% 100%, 0% 100%);
+}
+
+.four {
+  left: 00px;
+}
+
+.inactive4 {
+  transform: translateX(calc(40px - 11px));
+  border: 2px solid #10d610;
+  background-color: rgba(0, 255, 0, 0.943);
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.btn5_container {
+  margin-left: 40%;
+  width: 70px;
+  height: 30px;
+  background-color: #F8EDE3;
+  display: flex;
+  position: relative;
+  border: 3px solid #111;
+  margin-right: 20px;
+  
+}
+
+.five {
+  position: absolute;
+  height: 25px;
+  width: 35px;
+  background-color: grey;
+  display: block;
+  border: 2px solid red;
+  background-color: rgba(255, 0, 0, 0.951);
+  transition: all 0.3s ease;
+  clip-path: polygon(0 0, 50% 0, 100% 100%, 0% 100%);
+}
+
+.five {
+  left: 00px;
+}
+
+.inactive5 {
+  transform: translateX(calc(40px - 11px));
+  border: 2px solid #10d610;
+  background-color: rgba(0, 255, 0, 0.943);
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.btn6_container {
+  margin-left: 40%;
+  width: 70px;
+  height: 30px;
+  background-color: #F8EDE3;
+  display: flex;
+  position: relative;
+  border: 3px solid #111;
+  margin-right: 20px;
+  
+}
+
+.six {
+  position: absolute;
+  height: 25px;
+  width: 35px;
+  background-color: grey;
+  display: block;
+  border: 2px solid red;
+  background-color: rgba(255, 0, 0, 0.951);
+  transition: all 0.3s ease;
+  clip-path: polygon(0 0, 50% 0, 100% 100%, 0% 100%);
+}
+
+.six {
+  left: 00px;
+}
+
+.inactive6 {
+  transform: translateX(calc(40px - 11px));
+  border: 2px solid #10d610;
+  background-color: rgba(0, 255, 0, 0.943);
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.btn7_container {
+  margin-left: 40%;
+  width: 70px;
+  height: 30px;
+  background-color: #F8EDE3;
+  display: flex;
+  position: relative;
+  border: 3px solid #111;
+  margin-right: 20px;
+  
+}
+
+.seven {
+  position: absolute;
+  height: 25px;
+  width: 35px;
+  background-color: grey;
+  display: block;
+  border: 2px solid red;
+  background-color: rgba(255, 0, 0, 0.951);
+  transition: all 0.3s ease;
+  clip-path: polygon(0 0, 50% 0, 100% 100%, 0% 100%);
+}
+
+.seven {
+  left: 00px;
+}
+
+.inactive7 {
+  transform: translateX(calc(40px - 11px));
+  border: 2px solid #10d610;
+  background-color: rgba(0, 255, 0, 0.943);
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+
+.dashboard-wrapper {
+  text-align: center;
   border: 1px solid #dedede;
   margin-top: 30px;
   padding: 20px;

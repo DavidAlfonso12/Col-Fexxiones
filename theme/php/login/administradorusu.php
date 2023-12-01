@@ -129,8 +129,22 @@
 
 					<!-- Home -->
 					<li class="dropdown ">
-						<a href="../../index.html">Cerrar Sesion</a>
-					</li>
+						<a href="administrador.php">Volver</a>
+					</li><!-- / Home -->
+
+
+					<!-- Elements -->
+					
+
+					<!-- Pages -->
+					
+
+
+
+					
+
+					<!-- Shop -->
+					
 				</ul><!-- / .nav .navbar-nav -->
 
 			</div>
@@ -144,7 +158,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="content">
-					<h1 class="page-name">Bienvenido</h1>
+					<h1 class="page-name">Lista de Usuarios</h1>
 				</div>
 			</div>
 		</div>
@@ -156,24 +170,255 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
+			
 				<div class="dashboard-wrapper user-dashboard">
-				<img class="img-responsi" src="../../images/perfil/aliado1.png">
 					<div class="media">
-						<div class="media-body" class="texto">
-							<h2 class="media-heading">Ver lista de Aliados</h2>
-							<a href="administradorali.php" class="btn btn-main mt-20">Haga click aqui para ver</a>
-
+						<div class="pull-left">
+							
+						</div>
+						<div class="media-body">
+							<h2 class="media-heading">PABLO ENRIQUE INFANTE VILLAMIL</h2>
+                            
+						</div>
+					</div>
+					<div class="total-order mt-20">
+						<h4>Datos del Usuario</h4>
+						<div class="table-responsive">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>ID</th>
+										<th>Fecha de registro</th>
+										<th>Telefono</th>
+										<th>Correo</th>
+										
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><a href="#!">#101</a></td>
+										<td>Nov 28, 2023</td>
+										<td>3144377630</td>
+										<td>infante10.2@gmail.com</td>
+									</tr>
+									
+								</tbody>
+                                
+							</table>
+                            <div class="btn2_container">
+                               <span class="two"></span>
+                             </div>
+						</div>
+					</div>
+				</div>
+			</div>
+            
+            <div class="col-md-6">
+			
+				<div class="dashboard-wrapper user-dashboard">
+					<div class="media">
+						<div class="pull-left">
+							
+						</div>
+						<div class="media-body">
+							<h2 class="media-heading">SOCRATES JOSE WADNIPAR NIEBLES</h2>
+                            
+						</div>
+					</div>
+					<div class="total-order mt-20">
+						<h4>Datos del Usuario</h4>
+						<div class="table-responsive">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>ID</th>
+										<th>Fecha de registro</th>
+										<th>Telefono</th>
+										<th>Correo</th>
+										
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><a href="#!">#101</a></td>
+										<td>Nov 28, 2023</td>
+										<td>3217378318</td>
+										<td>SocratesIcon@outlook.com</td>
+									</tr>
+									
+								</tbody>
+							</table>
+                            <div class="btn3_container">
+                               <span class="tres"></span>
+                             </div>
 						</div>
 					</div>
 				</div>
 			</div>
             <div class="col-md-6">
-			<div class="dashboard-wrapper user-dashboard">
-			<img class="img-responsi" class="perfil"src="../../images/perfil/usuario1.png">
+			
+				<div class="dashboard-wrapper user-dashboard">
 					<div class="media">
+						<div class="pull-left">
+							
+						</div>
 						<div class="media-body">
-							<h2 class="media-heading">Ver lista de Usuarios</h2>
-							<a href="administradorusu.php" class="btn btn-main mt-20">Haga click aqui para ver</a>
+							<h2 class="media-heading">JESUS ALBERTO DIAZ RUBIO</h2>
+                            
+						</div>
+					</div>
+					<div class="total-order mt-20">
+						<h4>Datos del Usuario</h4>
+						<div class="table-responsive">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>ID</th>
+										<th>Fecha de registro</th>
+										<th>Telefono</th>
+										<th>Correo</th>
+										
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><a href="#!">#101</a></td>
+										<td>Nov 28, 2023</td>
+										<td>3174942319</td>
+										<td>ChuchoDiaz7@yahoo.com</td>
+									</tr>
+									
+								</tbody>
+							</table>
+                            <div class="btn4_container">
+                               <span class="four"></span>
+                             </div>
+						</div>
+					</div>
+				</div>
+			</div>
+            <div class="col-md-6">
+			
+				<div class="dashboard-wrapper user-dashboard">
+					<div class="media">
+						<div class="pull-left">
+							
+						</div>
+						<div class="media-body">
+							<h2 class="media-heading">OSWALDO JAIR GONZALEZ CERON</h2>
+                            
+						</div>
+					</div>
+					<div class="total-order mt-20">
+						<h4>Datos del Usuario</h4>
+						<div class="table-responsive">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>ID</th>
+										<th>Fecha de registro</th>
+										<th>Telefono</th>
+										<th>Correo</th>
+										
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><a href="#!">#101</a></td>
+										<td>Nov 28, 2023</td>
+										<td>3155186797</td>
+										<td>JairoTg@gamil.com</td>
+									</tr>
+									
+								</tbody>
+							</table>
+                            <div class="btn5_container">
+                               <span class="five"></span>
+                             </div>
+						</div>
+					</div>
+				</div>
+			</div>
+            <div class="col-md-6">
+			
+				<div class="dashboard-wrapper user-dashboard">
+					<div class="media">
+						<div class="pull-left">
+							
+						</div>
+						<div class="media-body">
+							<h2 class="media-heading">ALEXIS BLADIMIR VALOYES RAMOS</h2>
+                            
+						</div>
+					</div>
+					<div class="total-order mt-20">
+						<h4>Datos del Usuario</h4>
+						<div class="table-responsive">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>ID</th>
+										<th>Fecha de registro</th>
+										<th>Telefono</th>
+										<th>Correo</th>
+										
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><a href="#!">#101</a></td>
+										<td>Nov 28, 2023</td>
+										<td>3204716641</td>
+										<td>AlexisChi@gmail.com</td>
+									</tr>
+									
+								</tbody>
+							</table>
+                            <div class="btn6_container">
+                               <span class="six"></span>
+                             </div>
+						</div>
+					</div>
+				</div>
+			</div>
+            <div class="col-md-6">
+			
+				<div class="dashboard-wrapper user-dashboard">
+					<div class="media">
+						<div class="pull-left">
+							
+						</div>
+						<div class="media-body">
+							<h2 class="media-heading">JOSE HARRY COPETE MINOTTA</h2>
+                            
+						</div>
+					</div>
+					<div class="total-order mt-20">
+						<h4>Datos del Usuario</h4>
+						<div class="table-responsive">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>ID</th>
+										<th>Fecha de registro</th>
+										<th>Telefono</th>
+										<th>Correo</th>
+										
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><a href="#!">#101</a></td>
+										<td>Nov 28, 2023</td>
+										<td>3028164044</td>
+										<td>pEletinisMoj@outlook.com</td>
+									</tr>
+									
+								</tbody>
+							</table>
+                            <div class="btn7_container">
+                               <span class="seven"></span>
+                             </div>
 						</div>
 					</div>
 				</div>
@@ -230,7 +475,7 @@
     <!-- 
     Essential Scripts
     =====================================-->
-    
+    <script src="../../js/main.js"></script>
     <!-- Main jQuery -->
     <script src="../../plugins/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap 3.1 -->

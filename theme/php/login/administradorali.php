@@ -129,8 +129,22 @@
 
 					<!-- Home -->
 					<li class="dropdown ">
-						<a href="../../index.html">Cerrar Sesion</a>
-					</li>
+						<a href="administrador.php">volver</a>
+					</li><!-- / Home -->
+
+
+					<!-- Elements -->
+					
+
+					<!-- Pages -->
+					
+
+
+
+					
+
+					<!-- Shop -->
+					
 				</ul><!-- / .nav .navbar-nav -->
 
 			</div>
@@ -144,7 +158,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="content">
-					<h1 class="page-name">Bienvenido</h1>
+					<h1 class="page-name">Lista de Aliados</h1>
 				</div>
 			</div>
 		</div>
@@ -156,28 +170,165 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
+			
 				<div class="dashboard-wrapper user-dashboard">
-				<img class="img-responsi" src="../../images/perfil/aliado1.png">
 					<div class="media">
-						<div class="media-body" class="texto">
-							<h2 class="media-heading">Ver lista de Aliados</h2>
-							<a href="administradorali.php" class="btn btn-main mt-20">Haga click aqui para ver</a>
-
+						<div class="pull-left">
+							<img class="media-object user-img" src="../../images/cristiano1.jpg" alt="Image">
+						</div>
+						<div class="media-body">
+							<h2 class="media-heading">Cristian Rodolfo</h2>
+							<p>¡Hola! Soy un apasionado vendedor de moda colombiana con un ojo para las tendencias únicas y coloridas. Con más de cinco años de experiencia, ofrezco una cuidada selección de prendas que fusionan la elegancia tradicional colombiana con un toque moderno. </p>
+                            <button type="button" class="btn btn-outline-light">Perfil</button>
+						</div>
+					</div>
+					<div class="total-order mt-20">
+						<h4>Datos del Aliado</h4>
+						<div class="table-responsive">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>ID</th>
+										<th>Fecha de registro</th>
+										<th>N productos</th>
+										<th>Contacto</th>
+										
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><a href="#!">#101</a></td>
+										<td>Nov 21, 2023</td>
+										<td>15</td>
+										<td>Thegoat@gmail.com</td>
+									</tr>
+									
+								</tbody>
+							</table>
 						</div>
 					</div>
 				</div>
 			</div>
             <div class="col-md-6">
-			<div class="dashboard-wrapper user-dashboard">
-			<img class="img-responsi" class="perfil"src="../../images/perfil/usuario1.png">
+				
+				<div class="dashboard-wrapper user-dashboard">
 					<div class="media">
+						<div class="pull-left">
+							<img class="media-object user-img" src="../../images/dicarpio1.png" alt="Image">
+						</div>
 						<div class="media-body">
-							<h2 class="media-heading">Ver lista de Usuarios</h2>
-							<a href="administradorusu.php" class="btn btn-main mt-20">Haga click aqui para ver</a>
+							<h2 class="media-heading">Leandro Diaz</h2>
+							<p>Hola, soy un vendedor especializado en moda colombiana con un enfoque contemporáneo y vibrante. Mi pasión es conectar a los clientes con la rica herencia textil de Colombia, ofreciendo piezas únicas que combinan tradición y estilo moderno. </p>
+                            <button type="button" class="btn btn-outline-light">Perfil</button>
+						</div>
+					</div>
+					<div class="total-order mt-20">
+						<h4>Datos del aliado</h4>
+						<div class="table-responsive">
+							<table class="table">
+                            <thead>
+									<tr>
+										<th>ID</th>
+										<th>Fecha de registro</th>
+										<th>N productos</th>
+										<th>Contacto</th>
+										
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><a href="#!">#102</a></td>
+										<td>Nov 21, 2023</td>
+										<td>5</td>
+										<td>WolfStreet@outlook.com</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
 					</div>
 				</div>
 			</div>
+            <div class="col-md-6">
+				
+				<div class="dashboard-wrapper user-dashboard">
+					<div class="media">
+						<div class="pull-left">
+							<img class="media-object user-img" src="../../images/marcos.png" alt="Image">
+						</div>
+						<div class="media-body">
+							<h2 class="media-heading">Marcos Zuluaga</h2>
+							<p>¡Hola! Soy un entusiasta vendedor de moda colombiana, experto en fusionar lo auténtico con lo moderno. Mi misión es vestir a clientes con prendas que reflejen la rica cultura y artesanía de Colombia. Con un enfoque en la calidad y la moda sostenible.</p>
+                            <button type="button" class="btn btn-outline-light">Perfil</button>
+						</div>
+					</div>
+					<div class="total-order mt-20">
+						<h4>Datos del aliado</h4>
+						<div class="table-responsive">
+							<table class="table">
+                            <thead>
+									<tr>
+										<th>ID</th>
+										<th>Fecha de registro</th>
+										<th>N productos</th>
+										<th>Contacto</th>
+										
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><a href="#!">#103</a></td>
+										<td>Nov 21, 2023</td>
+										<td>55</td>
+										<td>LoveDoritos33@gmail.com</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+            <div class="col-md-6">
+				
+				<div class="dashboard-wrapper user-dashboard">
+					<div class="media">
+						<div class="pull-left">
+							<img class="media-object user-img" src="../../images/saul1.png" alt="Image">
+						</div>
+						<div class="media-body">
+							<h2 class="media-heading">Raul Buentipo</h2>
+							<p>Hola, soy un vendedor apasionado de moda colombiana, comprometido en traer la elegancia y colorido de Colombia a tu armario. Con estilo auténtico y atención personalizada, te invito a descubrir la belleza de la moda con un toque colombiano único. </p>
+                            <button type="button" class="btn btn-outline-light">Perfil</button>
+						</div>
+					</div>
+					<div class="total-order mt-20">
+						<h4>Datos del Aliado</h4>
+						<div class="table-responsive">
+							<table class="table">
+                            <thead>
+									<tr>
+										<th>ID</th>
+										<th>Fecha de registro</th>
+										<th>N productos</th>
+										<th>Contacto</th>
+										
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><a href="#!">#104</a></td>
+										<td>Nov 21, 2023</td>
+										<td>33</td>
+										<td>JimmyMc@gmail.com</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+            
+		</div>
+	</div>
 </section>
 
 

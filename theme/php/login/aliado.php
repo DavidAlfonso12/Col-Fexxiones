@@ -11,7 +11,6 @@
   }
 
 ?>
-
 <!DOCTYPE html>
 
 <!--
@@ -142,7 +141,11 @@
           <div class="widget user-aliado-profile">
             <!-- User Image -->
             <div class="profile-thumb">
+<<<<<<< HEAD
               <img src="../../images2/user/user-thumb.jpg" alt="" class="rounded-circle">
+=======
+              <img src="../../images/cristiano1.jpg" alt="" class="rounded-circle">
+>>>>>>> ramaJefe
             </div>
             <!-- User Name -->
             <h5 class="text-center">Jhon Roa</h5>

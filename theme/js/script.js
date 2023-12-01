@@ -93,15 +93,4 @@
   });
   $('.hero-slider').slickAnimation();
 
-
-  // Solo se permiten valores numericos en el campo documento del aliado
-  // document.addEventListener('DOMContentLoaded', function(){
-  //   var numeroDocumentoAliado = document.getElementById('Num_documento_ali');
-  
-  //   numeroDocumentoAliado.addEventListener("input",function() {
-  //     var valorNumerico = this.value.replace(`/[^0-9]/g`, '');
-  
-  //     this.value = valorNumerico;
-  //   });
-  // });
 })(jQuery);
