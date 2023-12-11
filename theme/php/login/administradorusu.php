@@ -24,7 +24,7 @@
   <meta name="generator" content="Themefisher Constra HTML Template v1.0">
   
   <!-- Favicon -->
-  <link rel="shortcut icon" type="image/x-icon" href="../../images/favicon.png" />
+  <link rel="shortcut icon" type="image/x-icon" href="../../images/Leonardo_Diffusion_XL_A_logo_for_a_clothing_brand_called_colfe_3 (1) 1.png" />
   
   <!-- Themefisher Icon font -->
   
@@ -90,16 +90,6 @@
 						</ul>
 					</li><!-- / Search -->
 
-					<!-- Languages -->
-					<li class="commonSelect">
-						<select class="form-control">
-							<option>ES</option>
-							<option>DE</option>
-							<option>FR</option>
-							<option>EN</option>
-						</select>
-					</li><!-- / Languages -->
-
 				</ul><!-- / .nav .navbar-nav .navbar-right -->
 			</div>
 		</div>
@@ -131,20 +121,6 @@
 					<li class="dropdown ">
 						<a href="administrador.php">Volver</a>
 					</li><!-- / Home -->
-
-
-					<!-- Elements -->
-					
-
-					<!-- Pages -->
-					
-
-
-
-					
-
-					<!-- Shop -->
-					
 				</ul><!-- / .nav .navbar-nav -->
 
 			</div>
@@ -165,6 +141,44 @@
 	</div>
 </section>
 
+<section class="container">
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Nombres</th>
+      <th scope="col">Apellidos</th>
+			<th scope="col">Telefono</th>
+			<th scope="col">Email</th>
+			<th scope="col">Estado</th>
+			<th scope="col">Editar</th>
+    </tr>
+  </thead>
+  <tbody>
+	<?php
+		include("conexion.php");
+
+		$sql = $link -> query("SELECT * FROM usuarios");
+		if(mysqli_num_rows($sql)>0){
+			while ($datos = mysqli_fetch_array($sql)) { 
+				echo "<tr>".
+				"<td>".$datos['usuario_id']."</td>".
+				"<td>".$datos['usu_nombres']."</td>".
+				"<td>".$datos['usu_apellidos']."</td>".
+				"<td>".$datos['usu_telefono']."</td>".
+				"<td>".$datos['usu_email']."</td>".
+				"<td>".$datos['usu_estado']."</td>".
+				"<td><a href=../CRUD_usuarios/modificar.php?id=".$datos['usuario_id'].">Actualizar</a></td>".
+				"</tr>";
+			}
+		}else{
+			echo"No se encuentran usuarios registrados";
+		}
+		
+		?>
+  </tbody>
+</table>
+</section>
 
 <section class="user-dashboard page-wrapper">
 	<div class="container">
@@ -500,7 +514,7 @@
     <!-- Main Js File -->
     <script src="../../js/script.js"></script>
     
-
-
+		<!-- icons -->
+		<script src="https://kit.fontawesome.com/2ef78ff00d.js" crossorigin="anonymous"></script>
   </body>
   </html>

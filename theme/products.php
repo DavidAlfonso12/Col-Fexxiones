@@ -6,6 +6,7 @@
     <title>Productos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/2ef78ff00d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <h1 class="text-center mb-5">Mis Productos</h1>
@@ -62,6 +63,7 @@
                     <textarea class="form-control" name="descripcionProd"></textarea>
                   </div>  
                 <button type="submit" class="btn btn-primary mt-3" value="ok">Registrar</button>
+                <a type="submit" href="php/login/aliado.php" class="btn btn-primary mt-3">Volver</a>
               </form>
         </div>
 

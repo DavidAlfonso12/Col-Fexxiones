@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<?php
+session_start();
+
+if(empty($_SESSION["id"])){
+  header("location: ../../login.html");
+}
+?>
 
 <!--
  // WEBSITE: https://themefisher.com
@@ -24,7 +31,7 @@
   <meta name="generator" content="Themefisher Constra HTML Template v1.0">
   
   <!-- Favicon -->
-  <link rel="shortcut icon" type="image/x-icon" href="../../images/favicon.png" />
+  <link rel="shortcut icon" type="image/x-icon" href="../../images/Leonardo_Diffusion_XL_A_logo_for_a_clothing_brand_called_colfe_3 (1) 1.png" />
   
   <!-- Themefisher Icon font -->
   
@@ -51,8 +58,7 @@
 		<div class="row">
 			<div class="col-md-4 col-xs-12 col-sm-4">
 				<div class="contact-number">
-					<i class="tf-ion-ios-telephone"></i>
-					<span>+57 3026485202</span>
+					<span><?php echo $_SESSION["nombre"]?></span>
 				</div>
 			</div>
 			<div class="col-md-4 col-xs-12 col-sm-4">
@@ -90,16 +96,6 @@
 						</ul>
 					</li><!-- / Search -->
 
-					<!-- Languages -->
-					<li class="commonSelect">
-						<select class="form-control">
-							<option>ES</option>
-							<option>DE</option>
-							<option>FR</option>
-							<option>EN</option>
-						</select>
-					</li><!-- / Languages -->
-
 				</ul><!-- / .nav .navbar-nav .navbar-right -->
 			</div>
 		</div>
@@ -129,7 +125,7 @@
 
 					<!-- Home -->
 					<li class="dropdown ">
-						<a href="../../index.html">Cerrar Sesion</a>
+						<a href="cerrar_sesion.php">Cerrar Sesion</a>
 					</li>
 				</ul><!-- / .nav .navbar-nav -->
 

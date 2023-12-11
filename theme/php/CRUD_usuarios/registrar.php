@@ -14,7 +14,7 @@ if (isset($_POST["register"])) {
     $rol = 1;
     $user_estado = "activo";
 
-    $password_hash = password_hash($userPassword, PASSWORD_BCRYPT);
+    //$password_hash = password_hash($userPassword, PASSWORD_BCRYPT);
 
     
     $query = $conexion->prepare('SELECT * FROM usuarios WHERE usu_email =:userEmail');
@@ -32,7 +32,7 @@ if (isset($_POST["register"])) {
         $query->bindParam(":userTelefono", $userTelefono);
         $query->bindParam(":userEmail", $userEmail);
         $query->bindParam(":userEstado", $user_estado);
-        $query->bindParam(":userPassword", $password_hash);
+        $query->bindParam(":userPassword", $userPassword);
         $query->bindParam(":rol", $rol);
 
         $result = $query->execute();

@@ -1,18 +1,11 @@
-<?php 
-
-  session_start();
-
-  if(!isset($_SESSION['rol'])){
-    header("location: ../../login.html");
-  }else{
-    if($_SESSION['rol'] != 2){
-      header('location: ../../login.html');
-    }
-  }
-
-?>
 <!DOCTYPE html>
+<?php
+session_start();
 
+if(empty($_SESSION["id"])){
+  header("location: ../../login.html");
+}
+?>
 <!--
  // WEBSITE: https://themefisher.com
  // TWITTER: https://twitter.com/themefisher
@@ -89,20 +82,13 @@
 
 								<!-- Dropdown list -->
 								<ul class="dropdown-menu">
-									<li><a class="dropdown-item active" href="../../aliado.html">aliado</a></li>
-									<li><a class="dropdown-item activeMyAds" href="../../aliado-my-ads.html">My Ads</a></li>
-									<li><a class="dropdown-item activeFavouriteAds" href="../../aliado-favourite-ads.html"> Favourite Ads</a></li>
-									<li><a class="dropdown-item activeArchivedAds" href="../../aliado-archived-ads.html"> Archived Ads</a></li>
-									<li><a class="dropdown-item activePendingAds" href="../../aliado-pending-ads.html"> Pending Ads</a></li>
+									<li><a class="dropdown-item active" href="aliado.php">Aliado</a></li>
+									<li><a class="dropdown-item activeMyAds" href="../../aliado-my-ads.html">Mis Añadidos</a></li>
+									<li><a class="dropdown-item activeFavouriteAds" href="../../aliado-favourite-ads.html"> Añadidos Favoritos</a></li>
+									<li><a class="dropdown-item activeArchivedAds" href="../../aliado-archived-ads.html"> Añadidos Archivados</a></li>
+									<li><a class="dropdown-item activePendingAds" href="../../aliado-pending-ads.html"> Pendiente Por Añadir</a></li>
 									
-									<li class="dropdown dropdown-submenu dropright">
-										<a class="dropdown-item dropdown-toggle" href="#!" id="dropdown0501" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sub Menu</a>
-					
-										<ul class="dropdown-menu" aria-labelledby="dropdown0501">
-											<li><a class="dropdown-item" href="../../index.html">Submenu 01</a></li>
-											<li><a class="dropdown-item" href="../../index.html">Submenu 02</a></li>
-										</ul>
-									</li>
+									
 								</ul>
 							</li>
 							
@@ -115,10 +101,10 @@
 
 						<ul class="navbar-nav ml-auto mt-10">
 							<li class="nav-item">
-								<a class="nav-link login-button" href="../../login.html">Cerrar Sesion</a>
+								<a class="nav-link login-button" href="cerrar_sesion.php">Cerrar Sesion</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link text-white add-button" href="../../products.php"><i class="fa fa-plus-circle"></i> Añadir Prodcuto</a>
+								<a class="nav-link text-white add-button" href="../../registrar_producto.php"><i class="fa fa-plus-circle"></i> Añadir Producuto</a>
 							</li>
 						</ul>
 					</div>
@@ -141,24 +127,21 @@
           <div class="widget user-aliado-profile">
             <!-- User Image -->
             <div class="profile-thumb">
-              <img src="../../images/cristiano1.jpg" alt="" class="rounded-circle">
+              <img src="../../images/ferxxo.png" alt="" >
             </div>
             <!-- User Name -->
-            <h5 class="text-center">Jhon Roa</h5>
-            <p>Joined February 06, 2017</p>
-            <a href="user-profile.html" class="btn btn-main-sm">Edit Profile</a>
+            <h5 class="text-center"><?php echo $_SESSION["nombre"] ." ". $_SESSION["apellido"]?></h5>
+            <p>Se unio el 28 Noviembre, 2023</p>
+            <a href="user-profile.html" class="btn btn-main-sm">Editar Perfil</a>
           </div>
           <!-- aliado Links -->
-          <div class="widget user-aliado-menu">
-            <ul>
-              <li class="active"><a href="../../aliado-my-ads.html"><i class="fa fa-user"></i>Mis Productos </a></li>
-              <li><a href="../../index.html"><i class="fa fa-cog"></i> Logout</a></li>
-            </ul>
-          </div>
+        
+
+
           
           <!-- delete-account modal -->
-          <!-- delete account popup modal start-->
-<!-- Modal -->
+          
+<!--
 <div class="modal fade" id="deleteaccount" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
   aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
@@ -181,36 +164,35 @@
     </div>
   </div>
 </div>
-<!-- delete account popup modal end-->
-          <!-- delete-account modal -->
+ delete account popup modal end
+     -->
 
         </div>
       </div>
       <div class="col-lg-8">
         <!-- Recently Favorited -->
         <div class="widget aliado-container my-adslist">
-          <h3 class="widget-header">My Ads</h3>
+          <h3 class="widget-header">Mis Añadidos</h3>
           <table class="table table-responsive product-aliado-table">
             <thead>
               <tr>
-                <th>Image</th>
-                <th>Product Title</th>
-                <th class="text-center">Category</th>
-                <th class="text-center">Action</th>
+                <th>Imagen</th>
+                <th>Nombre Del Producto</th>
+                <th class="text-center">Categoria</th>
+                <th class="text-center">Acción</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td class="product-thumb">
-                  <img width="80px" height="auto" src="images/products/products-1.jpg" alt="image description"></td>
+                  <img width="80px" height="auto" src="../../images/aliado/r1.jfif" alt="image description"></td>
                 <td class="product-details">
-                  <h3 class="title">Macbook Pro 15inch</h3>
-                  <span class="add-id"><strong>Ad ID:</strong> ng3D5hAMHPajQrM</span>
-                  <span><strong>Posted on: </strong><time>Jun 27, 2017</time> </span>
-                  <span class="status active"><strong>Status</strong>Active</span>
-                  <span class="location"><strong>Location</strong>Dhaka,Bangladesh</span>
+                  <h3 class="title">Camisa Negra Oversize</h3>
+                  <span><strong>Publicado: </strong><time>Junio 27, 2023</time> </span>
+                  <span class="status active"><strong>Estado:</strong>Activo</span>
+                  <span class="location"><strong>Locacion:</strong>Bogota, Colombia</span>
                 </td>
-                <td class="product-category"><span class="categories">Laptops</span></td>
+                <td class="product-category"><span class="categories">Camisa</span></td>
                 <td class="action" data-title="Action">
                   <div class="">
                     <ul class="list-inline justify-content-center">
@@ -234,22 +216,20 @@
                 </td>
               </tr>
               <tr>
-
                 <td class="product-thumb">
-                  <img width="80px" height="auto" src="images/products/products-2.jpg" alt="image description"></td>
+                  <img width="80px" height="auto" src="../../images/aliado/r2.jpg" alt="image description"></td>
                 <td class="product-details">
-                  <h3 class="title">Study Table Combo</h3>
-                  <span class="add-id"><strong>Ad ID:</strong> ng3D5hAMHPajQrM</span>
-                  <span><strong>Posted on: </strong><time>Feb 12, 2017</time> </span>
-                  <span class="status active"><strong>Status</strong>Active</span>
-                  <span class="location"><strong>Location</strong>USA</span>
+                  <h3 class="title">Chaqueta Roja</h3>
+                  <span><strong>Publicado: </strong><time>Agosto 12, 2023</time> </span>
+                  <span class="status active"><strong>Estado:</strong>Activo</span>
+                  <span class="location"><strong>Locacion:</strong>Bogota, Colombia</span>
                 </td>
-                <td class="product-category"><span class="categories">Laptops</span></td>
+                <td class="product-category"><span class="categories">Chaqueta</span></td>
                 <td class="action" data-title="Action">
                   <div class="">
                     <ul class="list-inline justify-content-center">
                       <li class="list-inline-item">
-                        <a data-toggle="tooltip" data-placement="top" title="View" class="view" href="category.html">
+                        <a data-toggle="tooltip" data-placement="top" title="view" class="view" href="category.html">
                           <i class="fa fa-eye"></i>
                         </a>
                       </li>
@@ -267,22 +247,22 @@
                   </div>
                 </td>
               </tr>
+              
               <tr>
                 <td class="product-thumb">
-                  <img width="80px" height="auto" src="images/products/products-3.jpg" alt="image description"></td>
+                  <img width="80px" height="auto" src="../../images/aliado/r3.jpg" alt="image description"></td>
                 <td class="product-details">
-                  <h3 class="title">Macbook Pro 15inch</h3>
-                  <span class="add-id"><strong>Ad ID:</strong> ng3D5hAMHPajQrM</span>
-                  <span><strong>Posted on: </strong><time>Jun 27, 2017</time> </span>
-                  <span class="status active"><strong>Status</strong>Active</span>
-                  <span class="location"><strong>Location</strong>Dhaka,Bangladesh</span>
+                  <h3 class="title">Shorts</h3>
+                  <span><strong>Publicado: </strong><time>Agosto 25, 2023</time> </span>
+                  <span class="status active"><strong>Estado:</strong>Activo</span>
+                  <span class="location"><strong>Locacion:</strong>Bogota, Colombia</span>
                 </td>
-                <td class="product-category"><span class="categories">Laptops</span></td>
+                <td class="product-category"><span class="categories">Shorts</span></td>
                 <td class="action" data-title="Action">
                   <div class="">
                     <ul class="list-inline justify-content-center">
                       <li class="list-inline-item">
-                        <a data-toggle="tooltip" data-placement="top" title="View" class="view" href="category.html">
+                        <a data-toggle="tooltip" data-placement="top" title="view" class="view" href="category.html">
                           <i class="fa fa-eye"></i>
                         </a>
                       </li>
@@ -300,23 +280,23 @@
                   </div>
                 </td>
               </tr>
-              <tr>
 
+
+                <tr>
                 <td class="product-thumb">
-                  <img width="80px" height="auto" src="images/products/products-4.jpg" alt="image description"></td>
+                  <img width="80px" height="auto" src="../../images/aliado/v1.jpg" alt="image description"></td>
                 <td class="product-details">
-                  <h3 class="title">Macbook Pro 15inch</h3>
-                  <span class="add-id"><strong>Ad ID:</strong> ng3D5hAMHPajQrM</span>
-                  <span><strong>Posted on: </strong><time>Jun 27, 2017</time> </span>
-                  <span class="status active"><strong>Status</strong>Active</span>
-                  <span class="location"><strong>Location</strong>Dhaka,Bangladesh</span>
+                  <h3 class="title">Vestido Negro</h3>
+                  <span><strong>Publicado: </strong><time>Septiembre 11, 2023</time> </span>
+                  <span class="status active"><strong>Estado:</strong>Activo</span>
+                  <span class="location"><strong>Locacion:</strong>Bogota, Colombia</span>
                 </td>
-                <td class="product-category"><span class="categories">Laptops</span></td>
+                <td class="product-category"><span class="categories">Vestido</span></td>
                 <td class="action" data-title="Action">
                   <div class="">
                     <ul class="list-inline justify-content-center">
                       <li class="list-inline-item">
-                        <a data-toggle="tooltip" data-placement="top" title="View" class="view" href="category.html">
+                        <a data-toggle="tooltip" data-placement="top" title="view" class="view" href="category.html">
                           <i class="fa fa-eye"></i>
                         </a>
                       </li>
@@ -334,23 +314,23 @@
                   </div>
                 </td>
               </tr>
-              <tr>
 
+              
+              <tr>
                 <td class="product-thumb">
-                  <img width="80px" height="auto" src="images/products/products-1.jpg" alt="image description"></td>
+                  <img width="80px" height="auto" src="../../images/aliado/m1.jpg" alt="image description"></td>
                 <td class="product-details">
-                  <h3 class="title">Macbook Pro 15inch</h3>
-                  <span class="add-id"><strong>Ad ID:</strong> ng3D5hAMHPajQrM</span>
-                  <span><strong>Posted on: </strong><time>Jun 27, 2017</time> </span>
-                  <span class="status active"><strong>Status</strong>Active</span>
-                  <span class="location"><strong>Location</strong>Dhaka,Bangladesh</span>
+                  <h3 class="title">Trapo Para Trapear</h3>
+                  <span><strong>Publicado: </strong><time>Octubre 31, 2023</time> </span>
+                  <span class="status active"><strong>Estado:</strong>Activo</span>
+                  <span class="location"><strong>Locacion:</strong>Bogota, Colombia</span>
                 </td>
-                <td class="product-category"><span class="categories">Laptops</span></td>
+                <td class="product-category"><span class="categories">Camisa</span></td>
                 <td class="action" data-title="Action">
                   <div class="">
                     <ul class="list-inline justify-content-center">
                       <li class="list-inline-item">
-                        <a href="category.html" data-toggle="tooltip" data-placement="top" title="View" class="view">
+                        <a data-toggle="tooltip" data-placement="top" title="view" class="view" href="category.html">
                           <i class="fa fa-eye"></i>
                         </a>
                       </li>
@@ -378,16 +358,16 @@
           <nav aria-label="Page navigation example">
             <ul class="pagination">
               <li class="page-item">
-                <a class="page-link" href="aliado.html" aria-label="Previous">
+                <a class="page-link" href="aliado.php" aria-label="Previous">
                   <span aria-hidden="true">&laquo;</span>
                   <span class="sr-only">Previous</span>
                 </a>
               </li>
-              <li class="page-item"><a class="page-link" href="aliado.html">1</a></li>
-              <li class="page-item active"><a class="page-link" href="aliado.html">2</a></li>
-              <li class="page-item"><a class="page-link" href="aliado.html">3</a></li>
+              <li class="page-item"><a class="page-link" href="aliado.php">1</a></li>
+              <li class="page-item active"><a class="page-link" href="aliado.php">2</a></li>
+              <li class="page-item"><a class="page-link" href="aliado.php">3</a></li>
               <li class="page-item">
-                <a class="page-link" href="aliado.html" aria-label="Next">
+                <a class="page-link" href="aliado.php" aria-label="Next">
                   <span aria-hidden="true">&raquo;</span>
                   <span class="sr-only">Next</span>
                 </a>
@@ -408,120 +388,96 @@
 =            Footer            =
 =============================-->
 
-<footer class="footer section section-sm">
-  <!-- Container Start -->
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-3 col-md-7 offset-md-1 offset-lg-0 mb-4 mb-lg-0">
-        <!-- About -->
-        <div class="block about">
-          <!-- footer logo -->
-          <img src="images/logo-footer.png" alt="logo">
-          <!-- description -->
-          <p class="alt-color">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-            laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-      </div>
-      <!-- Link list -->
-      <div class="col-lg-2 offset-lg-1 col-md-3 col-6 mb-4 mb-lg-0">
-        <div class="block">
-          <h4>Site Pages</h4>
-          <ul>
-            <li><a href="aliado-my-ads.html">My Ads</a></li>
-            <li><a href="aliado-favourite-ads.html">Favourite Ads</a></li>
-            <li><a href="aliado-archived-ads.html">Archived Ads</a></li>
-            <li><a href="aliado-pending-ads.html">Pending Ads</a></li>
-            <li><a href="terms-condition.html">Terms & Conditions</a></li>
-          </ul>
-        </div>
-      </div>
-      <!-- Link list -->
-      <div class="col-lg-2 col-md-3 offset-md-1 offset-lg-0 col-6 mb-4 mb-md-0">
-        <div class="block">
-          <h4>Admin Pages</h4>
-          <ul>
-            <li><a href="category.html">Category</a></li>
-            <li><a href="single.html">Single Page</a></li>
-            <li><a href="store.html">Store Single</a></li>
-            <li><a href="single-blog.html">Single Post</a>
-            </li>
-            <li><a href="blog.html">Blog</a></li>
+<footer class="footer section text-center">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<ul class="social-media">
+					<li>
+						<a href="https://web.facebook.com/profile.php?id=100004737528439">
+							<i class="tf-ion-social-facebook"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.instagram.com/its_jhon_r_r/">
+							<i class="tf-ion-social-instagram"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://x.com/TH4N0S16?t=WuUKfQXJqzcXzM2Mu4VdVg&s=09">
+							<i class="tf-ion-social-twitter"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.pinterest.com/themefisher/">
+							<i class="tf-ion-social-pinterest"></i>
+						</a>
+					</li>
+				</ul>
+				<ul class="footer-menu text-uppercase">
+					<li>
+						<a href="contact.html">CONTACTO</a>
+					</li>
+					<li>
+						<a href="shop.html">TIENDA</a>
+					</li>
+					<li>
+						<a href="pricing.html">PRECIOS</a>
+					</li>
+					<li>
+						<a href="contact.html">POLITICA DE PRIVACIDAD</a>
+					</li>
+				</ul>
+				<p class="copyright-text">Copyright &copy;2023, Diseñado &amp; Desarrollado por <a href="https://www.sena.edu.co/es-co/Paginas/default.aspx">TEAM SENA</a></p>
+			</div>
+		</div>
+	</footer>
 
 
-
-          </ul>
-        </div>
-      </div>
-      <!-- Promotion -->
-      <div class="col-lg-4 col-md-7">
-        <!-- App promotion -->
-        <div class="block-2 app-promotion">
-          <div class="mobile d-flex  align-items-center">
-            <a href="index.html">
-              <!-- Icon -->
-              <img src="images/footer/phone-icon.png" alt="mobile-icon">
-            </a>
-            <p class="mb-0">Get the Dealsy Mobile App and Save more</p>
-          </div>
-          <div class="download-btn d-flex my-3">
-            <a href="index.html"><img src="../../images/apps/google-play-store.png" class="img-fluid" alt=""></a>
-            <a href="index.html" class=" ml-3"><img src="images/apps/apple-app-store.png" class="img-fluid" alt=""></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Container End -->
-</footer>
-<!-- Footer Bottom -->
-<footer class="footer-bottom">
-  <!-- Container Start -->
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 text-center text-lg-left mb-3 mb-lg-0">
-        <!-- Copyright -->
-        <div class="copyright">
-          <p>Copyright &copy; <script>
-              var CurrentYear = new Date().getFullYear()
-              document.write(CurrentYear)
-            </script>. Designed & Developed by <a class="text-white" href="https://themefisher.com">Themefisher</a></p>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <!-- Social Icons -->
-        <ul class="social-media-icons text-center text-lg-right">
-          <li><a class="fa fa-facebook" href="https://www.facebook.com/themefisher"></a></li>
-          <li><a class="fa fa-twitter" href="https://www.twitter.com/themefisher"></a></li>
-          <li><a class="fa fa-pinterest-p" href="https://www.pinterest.com/themefisher"></a></li>
-          <li><a class="fa fa-github-alt" href="https://www.github.com/themefisher"></a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <!-- Container End -->
-  <!-- To Top -->
-  <div class="scroll-top-to">
-    <i class="fa fa-angle-up"></i>
-  </div>
-</footer>
 
 <!-- 
 Essential Scripts
 =====================================-->
-<script src="../../plugins/jquery/jquery.min.js"></script>
-<script src="../../plugins/bootstrap/popper.min.js"></script>
-<script src="../../plugins/bootstrap/bootstrap.min.js"></script>
-<script src="../../plugins/bootstrap/bootstrap-slider.js"></script>
-<script src="../../plugins/tether/js/tether.min.js"></script>
-<script src="../../plugins/raty/jquery.raty-fa.js"></script>
-<script src="../../plugins/slick/slick.min.js"></script>
-<script src="../../plugins/jquery-nice-select/js/jquery.nice-select.min.js"></script>
+<script src="../../plugins2/jquery/jquery.min.js"></script>
+<script src="../../plugins2/bootstrap/popper.min.js"></script>
+<script src="../../plugins2/bootstrap/bootstrap.min.js"></script>
+<script src="../../plugins2/bootstrap/bootstrap-slider.js"></script>
+<script src="../../plugins2/tether/js/tether.min.js"></script>
+<script src="../../plugins2/raty/jquery.raty-fa.js"></script>
+<script src="../../plugins2/slick/slick.min.js"></script>
+<script src="../../plugins2/jquery-nice-select/js/jquery.nice-select.min.js"></script>
 <!-- google map -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU" defer></script>
 <script src="../../plugins/google-map/map.js" defer></script>
 
 <script src="js/script.js"></script>
+
+
+
+
+ <!-- Main jQuery -->
+ <script src="../../plugins/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap 3.1 -->
+    <script src="../../plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Bootstrap Touchpin -->
+    <script src="../../plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
+    <!-- Instagram Feed Js -->
+    <script src="../../plugins/instafeed/instafeed.min.js"></script>
+    <!-- Video Lightbox Plugin -->
+    <script src="../../plugins/ekko-lightbox/dist/ekko-lightbox.min.js"></script>
+    <!-- Count Down Js -->
+    <script src="../../plugins/syo-timer/build/jquery.syotimer.min.js"></script>
+
+    <!-- slick Carousel -->
+    <script src="../../plugins/slick/slick.min.js"></script>
+    <script src="../../plugins/slick/slick-animation.min.js"></script>
+
+    <!-- Google Mapl -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC72vZw-6tGqFyRhhg5CkF2fqfILn2Tsw"></script>
+    <script type="text/javascript" src="plugins/google-map/gmap.js"></script>
+
+    <!-- Main Js File -->
+    <script src="../../js/script.js"></script>
 
 </body>
 

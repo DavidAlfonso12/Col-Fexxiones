@@ -1002,7 +1002,7 @@ ul.pagination .active a {
 .user-aliado-profile .profile-thumb img {
   width: 130px;
   height: auto;
-  border: 5px solid #F4F7F9;
+  border: 0;
 }
 .user-aliado-profile h4 {
   margin-top: 10px;

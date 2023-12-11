@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-11-2023 a las 17:38:13
+-- Tiempo de generación: 11-12-2023 a las 23:14:12
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -72,9 +72,10 @@ CREATE TABLE `aliados` (
 --
 
 INSERT INTO `aliados` (`aliado_id`, `ali_documento`, `ali_nombres`, `ali_apellidos`, `ali_tipo_producto`, `ali_telefono`, `ali_direccion`, `ali_email`, `ali_nombre_empresa`, `ali_estado`, `ali_password`, `ali_foto`, `ali_ventas`, `ali_rol`) VALUES
-(1, 123456789, 'carlos', 'mancera', 'pantalones', '2222223333', 'dg 11 cr 2', 'carlos123@gmail.com', 'pantalonxz', '', 'carlos123', '', 0, 2),
-(2, 2147483647, 'vendedor', 'dd', 'Zapatos', '11111123333', 'dg 23 cr 3', 'vendedor123@gmail.com', 'colzapatos', '', 'vendedor123', '', 2, 2),
-(3, 123456789, 'aliado', 'aliadito', 'Camisetas', '3023322', 'Dg 782 dg ss', 'aliado123@gmail.com', 'CamisetasDondeAli', 'activo', '$2y$10$dpkLodVb', '', 0, 2);
+(1, 123456789, 'carlos', 'mancera jefe', 'pantalones', '3209999', 'dg 11 cr 2', 'carlos123@gmail.com', 'Pantagood', 'activo', 'carlos123', '', 27, 2),
+(2, 9999999, 'vendedor crack', 'dd', 'zapatos', '11111123333', 'dg 23 cr 3', 'vendedor123@gmail.com', 'colzapatitos', 'activo', 'vendedor123', '', 4, 2),
+(3, 123456789, 'aliado mod', 'aliadito', 'Camisetas', '1111111', 'Dg 782 dg ss', 'aliado123@gmail.com', 'CamisetasDondeAli', 'activo', 'aliado123', '', 5, 2),
+(4, 123, 'ali prueba', 'adl', 'chaquetas', '3122', 'dg27', 'ali@gmail.com', 'aliadito', 'activo', '12345', '', 5, 2);
 
 -- --------------------------------------------------------
 
@@ -170,10 +171,12 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`usuario_id`, `usu_nombres`, `usu_apellidos`, `usu_telefono`, `usu_email`, `usu_estado`, `usu_password`, `usu_rol`) VALUES
-(1, 'Santiago', 'Rocha', '111111222', 'santiago123@gmail.com', '', 'santiago123', 1),
+(1, 'Santiago', 'Rocha mancera', '2222222', 'santiago123@gmail.com', 'activo', 'santiago123', 1),
 (2, 'Elvis', 'crespo', '11133333322', 'elvis123@gmail.com', '', 'elvis123', 1),
-(3, 'prueba', '1', '3017', 'prueba123@gmail.com', 'activo', '$2y$10$gWWdtBZI', 1),
-(4, 'pepe', 'castro', '39999', 'pepe@gmail.com', 'activo', '$2y$10$MuRI2ajQ', 1);
+(4, 'pepe', 'castro', '39999', 'pepe@gmail.com', 'activo', '$2y$10$MuRI2ajQ', 1),
+(6, 'juanito', 'per', '2323232', 'juanito@gmail.com', 'activo', '$2y$10$bqLs6jOx', 1),
+(7, 'cliente', 'comprador', '3332222', 'cliente@gmail.com', 'activo', '12345', 1),
+(8, 'pruebita', 'test mod', '66666', 'pruebita@gmail.com', 'activo', '12345', 1);
 
 --
 -- Índices para tablas volcadas
@@ -240,7 +243,7 @@ ALTER TABLE `administradores`
 -- AUTO_INCREMENT de la tabla `aliados`
 --
 ALTER TABLE `aliados`
-  MODIFY `aliado_id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `aliado_id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `categorias`
@@ -258,7 +261,7 @@ ALTER TABLE `productos`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `usuario_id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `usuario_id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Restricciones para tablas volcadas
